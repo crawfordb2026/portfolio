@@ -674,11 +674,11 @@ footer {
 }
 
 .small-projects-list {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 .project-list-item {
@@ -692,6 +692,7 @@ footer {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    height: fit-content;
 }
 
 .project-list-item::before {
@@ -778,6 +779,11 @@ footer {
     
     .small-projects h2 {
         font-size: 2rem;
+    }
+    
+    .small-projects-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .project-list-item {

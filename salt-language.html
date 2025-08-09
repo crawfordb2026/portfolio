@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salt Programming Language - Crawford Barnett</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project-styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <nav class="project-nav">
+    <div class="nav-container">
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <div class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="project-main">
+    <div class="project-header">
+      <div class="project-icon">🧂</div>
+      <h1>Salt: Programming Language</h1>
+      <p class="project-subtitle">Statically typed educational language with custom lexer, parser (AST), and interpreter</p>
+      <div class="project-links">
+        <a href="https://salt-programming-language.onrender.com" class="demo-link" target="_blank"><i class="fas fa-play"></i> Open Web IDE</a>
+      </div>
+    </div>
+
+    <section class="project-overview">
+      <h2>Overview</h2>
+      <p>Designed and implemented a custom programming language featuring static typing, intuitive syntax, and robust error handling. The implementation includes a complete lexer/tokenizer, recursive descent parser that builds ASTs, an interpreter, and a comprehensive test suite—written in Python.</p>
+    </section>
+
+    <section class="key-features">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-cubes"></i>
+          <h3>Core Components</h3>
+          <p>Custom lexer, recursive descent parser (AST), and interpreter with modular architecture</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Type System</h3>
+          <p>Static typing with compile-time checks for int, double, string, boolean, and arrays</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-stream"></i>
+          <h3>Control Flow</h3>
+          <p>If/else, while, loop, and function definitions with parameter type checking</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-th"></i>
+          <h3>Arrays</h3>
+          <p>Fixed-size, type-safe arrays with dynamic sizing via expressions and bounds checking</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-bug"></i>
+          <h3>Error Handling</h3>
+          <p>Descriptive syntax, type, and runtime errors with clear messages and scopes</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="purpose">
+      <h2>Purpose</h2>
+      <p>Salt is a bridge language: more structured than Python but more approachable than C++/Java. It teaches fundamentals—types, control flow, functions, arrays, scope, and error handling—using readable, word-based syntax and friendly errors, ideal for education and onboarding.</p>
+    </section>
+
+    <section class="technologies">
+      <h2>Technology Choice</h2>
+      <p>Salt is implemented entirely in Python to maximize clarity and developer iteration speed. Python powers the full stack—the lexer, recursive‑descent parser that builds ASTs, the interpreter, and a focused test suite—leveraging its rich standard library and clean syntax to make the language easy to extend and ideal for teaching.</p>
+    </section>
+
+    <section class="results">
+      <h2>Results & Impact</h2>
+      <div class="results-grid">
+        <div class="result-item"><i class="fas fa-check-circle"></i><p>End-to-end language stack: tokenizer → parser (AST) → interpreter</p></div>
+        <div class="result-item"><i class="fas fa-chalkboard-teacher"></i><p>Educational focus with static typing and clear error messages</p></div>
+        <div class="result-item"><i class="fas fa-code"></i><p>Extensible architecture enables adding new syntax and features</p></div>
+      </div>
+    </section>
+
+    <section class="run">
+      <h2>Run Locally</h2>
+      <p>Use the interactive terminal or run programs from files.</p>
+      <pre><code># Start interactive terminal
+python3 main.py
+
+# Run a program file (CLI)
+./salt example.salt
+</code></pre>
+    </section>
+  </main>
+
+  <footer class="project-footer">
+    <p>Crawford Barnett ©2024</p>
+  </footer>
+</body>
+</html> 

@@ -66,6 +66,10 @@
         <section id="projects" class="projects">
             <h2>Projects</h2>
             <div class="project-grid">
+                <div class="project-card" onclick="window.location.href='salt-language.html'" style="cursor: pointer;">
+                    <h3>Salt Programming Language</h3>
+                    <p>A statically typed educational programming language with a custom lexer, recursive descent parser (AST), and interpreter—built in Python with robust error handling and a comprehensive test suite.</p>
+                </div>
                 <div class="project-card" onclick="window.location.href='digit-classifier.html'" style="cursor: pointer;">
                     <h3>Neural Network Digit Classifier</h3>
                     <p>A full-stack web application that uses deep learning to classify handwritten digits in real-time. Built with PyTorch neural network, Flask backend, and interactive HTML5 Canvas frontend. Users can draw digits and receive instant AI predictions with ~95% accuracy.</p>
@@ -129,6 +133,19 @@
             <p class="section-subtitle">Quick builds, experiments, and learning projects that showcase my diverse skills and interests.</p>
             
             <div class="small-projects-list">
+                <div class="project-list-item" onclick="window.open('https://crawfordb2026.github.io/letterboxed-solver/', '_blank')" style="cursor: pointer;">
+                    <div class="project-list-icon">🧩</div>
+                    <div class="project-list-content">
+                        <h3>Letterboxed Puzzle Solver</h3>
+                        <p>Advanced algorithm that solves the New York Times Letterboxed puzzle, featuring custom puzzle input and random puzzle generation capabilities</p>
+                        <div class="project-list-tags">
+                            <span class="list-tag">Algorithm Design</span>
+                            <span class="list-tag">Problem Solving</span>
+                            <span class="list-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-list-item" onclick="window.open('https://crawfordb2026.github.io/loreal-chatbot/', '_blank')" style="cursor: pointer;">
                     <div class="project-list-icon">💄</div>
                     <div class="project-list-content">
@@ -168,27 +185,12 @@
                     </div>
                 </div>
 
-                <div class="project-list-item" onclick="window.open('https://crawfordb2026.github.io/letterboxed-solver/', '_blank')" style="cursor: pointer;">
-                    <div class="project-list-icon">🧩</div>
-                    <div class="project-list-content">
-                        <h3>Letterboxed Puzzle Solver</h3>
-                        <p>Advanced algorithm that solves the New York Times Letterboxed puzzle, featuring custom puzzle input and random puzzle generation capabilities</p>
-                        <div class="project-list-tags">
-                            <span class="list-tag">Algorithm Design</span>
-                            <span class="list-tag">Problem Solving</span>
-                            <span class="list-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="project-list-item" onclick="window.open('https://crawfordb2026.github.io/coldplay/', '_blank')" style="cursor: pointer;">
                     <div class="project-list-icon">🎵</div>
                     <div class="project-list-content">
                         <h3>Coldplay Fan Website</h3>
-                        <p>Comprehensive band website showcasing my foundational front-end development skills, featuring responsive design and modern web technologies</p>
+                        <p>My first front-end development project that taught me the fundamentals of web design. Built from scratch using HTML, CSS, and JavaScript, this project helped me understand responsive design principles, CSS layout techniques, and the basics of interactive web development. A foundational learning experience that sparked my passion for creating engaging user experiences.</p>
                         <div class="project-list-tags">
-                            <span class="list-tag">Frontend Development</span>
-                            <span class="list-tag">Responsive Design</span>
                             <span class="list-tag">HTML/CSS/JS</span>
                         </div>
                     </div>
@@ -200,7 +202,7 @@
             <h2>Contact</h2>
             <p>Got a question or interested in collaborating? Just drop your details below and I'll be in touch shortly.</p>
             
-            <form id="contact-form">
+            <form id="contact-form" action="https://formspree.io/f/xqaldjnr" method="POST">
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Please enter your name." required>
                 </div>

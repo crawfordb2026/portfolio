@@ -257,7 +257,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Contact form
         contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
+            // Don't prevent default - let Formspree handle the submission
+            // e.preventDefault();
 
             const formData = {
                 name: document.getElementById('name').value,
@@ -265,15 +266,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 message: document.getElementById('message').value
             };
 
-            // Here you would typically send the form data to your backend
-            // For now, we'll just log it to the console
             console.log('Form submitted:', formData);
-
-            // Clear the form
-            contactForm.reset();
 
             // Show a success message
             alert('Thank you for your message! I will get back to you soon.');
+            
+            // Form will be reset by Formspree after successful submission
         });
 
         // Smooth scrolling for navigation links
