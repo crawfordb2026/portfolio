@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Human Activity Recognition (HAR) - Crawford Barnett</title>
+	<link rel="stylesheet" href="../styles.css" />
+	<link rel="stylesheet" href="../project-styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+	<nav class="project-nav">
+		<div class="nav-container">
+			<a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+			<div class="nav-links">
+				<a href="../index.html#home">Home</a>
+				<a href="../index.html#about">About</a>
+				<a href="../index.html#projects">Projects</a>
+				<a href="../index.html#contact">Contact</a>
+			</div>
+		</div>
+	</nav>
+
+	<main class="project-main">
+		<div class="project-header">
+			<div class="project-icon">🏃‍♂️</div>
+			<h1>Human Activity Recognition (HAR)</h1>
+			<p class="project-subtitle">Random Forest classifier on the UCI HAR dataset with end-to-end ML pipeline</p>
+			<div class="project-links">
+				<a href="https://github.com/crawfordb2026" class="github-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+				<a href="https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones" class="demo-link" target="_blank"><i class="fas fa-database"></i> Dataset</a>
+			</div>
+		</div>
+
+		<section class="project-overview">
+			<h2>Overview</h2>
+			<p>Built an end-to-end Human Activity Recognition pipeline using the UCI HAR smartphone sensor dataset (accelerometer + gyroscope windows) to classify six activities: walking, walking upstairs, walking downstairs, sitting, standing, and laying. The project ships with reproducible scripts, saved models, and ready-to-share visualizations.</p>
+		</section>
+
+		<section class="key-features">
+			<h2>Key Features</h2>
+			<div class="features-grid">
+				<div class="feature-item">
+					<i class="fas fa-wave-square"></i>
+					<h3>Preprocessing</h3>
+					<p>Train/test split loading, label encoding, and z-score scaling (StandardScaler fit only on train) to avoid leakage.</p>
+				</div>
+				<div class="feature-item">
+					<i class="fas fa-tree"></i>
+					<h3>Modeling</h3>
+					<p>Random Forest classifier tuned with GridSearchCV to balance accuracy and generalization to unseen subjects.</p>
+				</div>
+				<div class="feature-item">
+					<i class="fas fa-chart-line"></i>
+					<h3>Evaluation</h3>
+					<p>Reports accuracy plus per-class precision, recall, and F1; confusion matrix to surface posture vs motion confusions.</p>
+				</div>
+				<div class="feature-item">
+					<i class="fas fa-images"></i>
+					<h3>Interpretability</h3>
+					<p>Feature-importance ranking and class distribution visuals saved to a results directory for portfolio-ready sharing.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="technologies">
+			<h2>Stack & Tools</h2>
+			<div class="tech-categories">
+				<div class="tech-category">
+					<h3>Data & Modeling</h3>
+					<div class="tech-tags">
+						<span class="tech-tag">Python</span>
+						<span class="tech-tag">pandas</span>
+						<span class="tech-tag">NumPy</span>
+						<span class="tech-tag">scikit-learn</span>
+						<span class="tech-tag">Random Forest</span>
+						<span class="tech-tag">GridSearchCV</span>
+					</div>
+				</div>
+				<div class="tech-category">
+					<h3>Visualization</h3>
+					<div class="tech-tags">
+						<span class="tech-tag">matplotlib</span>
+						<span class="tech-tag">Seaborn</span>
+					</div>
+				</div>
+				<div class="tech-category">
+					<h3>Engineering</h3>
+					<div class="tech-tags">
+						<span class="tech-tag">src/train.py</span>
+						<span class="tech-tag">src/evaluate.py</span>
+						<span class="tech-tag">models/</span>
+						<span class="tech-tag">results/</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="results">
+			<h2>Results & Insights</h2>
+			<div class="results-grid">
+				<div class="result-item"><i class="fas fa-check-circle"></i><p>Subject-independent split highlights real-world generalization to unseen users.</p></div>
+				<div class="result-item"><i class="fas fa-balance-scale"></i><p>Class balance plots and confusion matrix reveal posture vs motion confusions.</p></div>
+				<div class="result-item"><i class="fas fa-lightbulb"></i><p>Feature importance surfaces the top sensor-derived signals driving predictions.</p></div>
+				<div class="result-item"><i class="fas fa-cogs"></i><p>Reusable scripts and saved artifacts make reruns and extensions straightforward.</p></div>
+			</div>
+		</section>
+
+		<section class="run">
+			<h2>How to Reproduce</h2>
+			<p>Refactored from notebook to scripts so the full workflow is repeatable.</p>
+			<pre><code># Install dependencies
+pip install -r requirements.txt
+
+# Train with grid search and save best model
+python src/train.py --data data/uci_har --out models/
+
+# Evaluate and export metrics + plots
+python src/evaluate.py --data data/uci_har --model models/best.joblib --out results/
+</code></pre>
+		</section>
+
+		<section class="next-steps">
+			<h2>Next Extension</h2>
+			<p>Add a confidence-based anomaly layer using predict_proba() to flag low-confidence windows and surface uncertain activity segments.</p>
+		</section>
+	</main>
+
+	<footer class="project-footer">
+		<p>Crawford Barnett ©2024</p>
+	</footer>
+</body>
+</html>

@@ -1,7 +1,0 @@
-1 - scrolling animation for all the languages
-
-
-2 some sort of section for puzzles
-2b add the lookandsay solver in go
-
-
